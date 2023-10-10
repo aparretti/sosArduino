@@ -1,32 +1,22 @@
+
+#include <Servo.h>
+
+
+Servo myServo;
 void setup() {
-  // put your setup code here, to run once:
+
+myServo.attach(11);
+myServo.write(90);
+
 pinMode(13, OUTPUT);
 }
 
-
 void loop () {
-blinkOnce(1000);
+blinkOnce(100);
+
 }
 void blinkOnce (int time) {
 digitalWrite(13, 1);
-delay(time);
-digitalWrite(13, 0) ;
-delay(time);
-digitalWrite(13, 0) ;
-delay(time);
-
-digitalWrite(13, 1);
-delay(500);
-digitalWrite(13, 0) ;
-delay(500);
-digitalWrite(13, 0) ;
-delay(500);
-
-
-
-digitalWrite(13, 1);
-delay(time);
-digitalWrite(13, 0) ;
 delay(time);
 digitalWrite(13, 0) ;
 delay(time);
