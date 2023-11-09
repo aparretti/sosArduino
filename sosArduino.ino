@@ -9,36 +9,30 @@ Servo leftFoot;
 Servo rightLeg;
 Servo rightFoot;
 
+int llCenter = 92;
+int lfCenter = 95;
+int rlCenter = 90;
+int rfCenter = 94;
 
 void setup() {
 
 
 leftLeg.attach(2,1000,2000);
-leftLeg.write(92);
+leftLeg.write(llCenter);
 leftFoot.attach(4,1000,2000);
-leftFoot.write(90);
+leftFoot.write(lfCenter);
 rightLeg.attach(3,1000,2000);
-rightLeg.write(90);
+rightLeg.write(rlCenter);
 rightFoot.attach(5,1000,2000);
-rightFoot.write(90);
-
-
-
-
-
-
-
-
-
-
-
-
-
-myServo.attach(11);
-myServo.write(90);
-
-pinMode(13, OUTPUT);
+rightFoot.write(rfCenter);
 }
+
+void takeStep(){
+leftLeg.write(llCenter+15);
+leftFoot.write(lfCenter+15);
+}
+
+
 
 void loop () {
 blinkOnce(50);
