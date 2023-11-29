@@ -37,45 +37,71 @@ rightFoot.write(rfCenter);
 
 void poseOne(){
   
-rightFoot.write(rfCenter + 4);
+rightFoot.write(rfCenter );
 //move foot to fixed positon
-rightLeg.write(rlCenter+ 4);
+rightLeg.write(rlCenter);
 //move leg to a fixed position
-leftFoot.write(lfCenter + 5);
+leftFoot.write(lfCenter );
 //move left foot to fixed positon
-leftLeg.write(lfCenter + 4);
+leftLeg.write(lfCenter );
 //move left leg to fixed positio
+}
+
 
 void poseTwo(){
   
-rightFoot.write(rfCenter + 6);
+rightFoot.write(rfCenter +50);
 //move foot to fixed positon
-rightLeg.write(rlCenter+ 3);
+rightLeg.write(rlCenter +50);
 //move leg to a fixed position
-leftFoot.write(lfCenter + 7);
+leftFoot.write(lfCenter + 76);
 //move left foot to fixed positon
-leftLeg.write(lfCenter + 3);
-//move left leg to fixed positio
+leftLeg.write(lfCenter );
+//move left leg to fixed position
 }
 
+//void poseThree(){
+
+
+//rightFoot.write(rfCenter  );
+//move foot to fixed positon
+//rightLeg.write(rlCenter );
+//move leg to a fixed position
+//leftFoot.write(lfCenter + 25);
+//move left foot to fixed positon
+//leftLeg.write(lfCenter + 2);
+//move left leg to fixed position
+
+
+
+//}
 
 
 
 
 
 
-}
+
 void loop () {
 //blinkOnce(50);
 //make the right/left feet move into position
 poseOne();
+delay(450);
+poseTwo();
+delay(450);
+
 }
+
+
+
+
+
 void blinkOnce (int time) {
 myServo.write(50);
 digitalWrite(13, 1);
-delay(time);
+delay(439);
 digitalWrite(13, 0) ;
 myServo.write(70);
-delay(time);
+delay(464);
 }
 
